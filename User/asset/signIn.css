@@ -86,7 +86,11 @@
   }
   .input-wrap .line{
     margin: 10px 0;
+    height: 1px;
+    width: 100%;
+    background-color: white;
   }
+  
   .btn-submit{
     background: 0 0;
     border: none;
