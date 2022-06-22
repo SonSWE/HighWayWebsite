@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./Style/Modal.css">
+    <link rel="stylesheet" href="./Style/admin.css">
+    <title>Admin</title>
+</head>
+
+<body>
+    <style>
+        @media only screen and (max-width: 959px) {
+            .row {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+            }
+        }
+
+        @media only screen and (min-width: 960px) {
+            .row {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 15px;
+            }
+        }
+    </style>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span>Highway</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="./admin.html"><span class="las la-igloo"></span><span>Trang chủ</span></a>
+                </li>
+                <li>
+                    <a href="./customers.html" ><span class="las la-user"></span><span>Nhân
+                            viên</span></a>
+                </li>
+                <li>
+                    <a href="./product.html" class="active"><span class="las la-clipboard-list"></span><span>Sản phẩm</span></a>
+                </li>
+
+                <li>
+                    <a href="./Account.html"><span class="las la-user-circle"></span><span>Tài khoản</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+
+                Quản lý Sản Phẩm
+            </h2>
+    
+            <div class="user-wapper">
+                <img src="IMG_0785.png" width="40px" height="40px" alt="">
+                <div>
+                    <h4 style="white-space:nowrap ;">Gia Linh</h4>
+                    <small style="white-space:nowrap ;">Admin Ghost</small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="form-button">
+                <div class="search-wapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Tìm kiếm" />
+                </div>
+                <div class="button-box">
+                    <button class="btn-add-product" onclick="OpenModel('modal-add');">Thêm mới</button>
+                </div>
+            </div>
+            <div class="product-list">
+                <div class="row product-list-wrap">
+                    <div class="product-item">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220614/HWHA0093_copy.jpg" alt="">
+                            </div>
+
+                            <div class="product-content">
+                                <span>Essential</span>
+                                <h3>Polo Ruben - Relaxed fit - Xanh</h3>
+                                <span>480,000 ₫</span>
+                            </div>
+                            <div class="contact" style="background-color: white;text-align: center;">
+                                <i id="updateBtn" class="fa-solid fa-pencil" onclick="OpenModel('modal-update')"></i>
+                                <i id="DetailBtn" class="fa-solid fa-book" onclick="OpenModel('modal-detail')"></i>
+                                <i id="deleteBtn" class="fa-solid fa-trash" onclick="OpenModel('modal-del')"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220614/HWHA0204_copy.jpg" alt="">
+                            </div>
+
+                            <div class="product-content">
+                                <span>Essential</span>
+                                <h3>Polo Ruben - Relaxed fit - Xanh</h3>
+                                <span>480,000 ₫</span>
+                            </div>
+                            <div class="contact" style="background-color: white;text-align: center;">
+                                <i id="updateBtn" class="fa-solid fa-pencil" onclick="OpenModel('modal-update')"></i>
+                                <i id="DetailBtn" class="fa-solid fa-book" onclick="OpenModel('modal-detail')"></i>
+                                <i id="deleteBtn" class="fa-solid fa-trash" onclick="OpenModel('modal-del')"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220614/HWHA0726_copy.jpg" alt="">
+                            </div>
+
+                            <div class="product-content">
+                                <span>Essential</span>
+                                <h3>Polo Ruben - Relaxed fit - Xanh</h3>
+                                <span>480,000 ₫</span>
+                            </div>
+                            <div class="contact" style="background-color: white;text-align: center;">
+                                <i id="updateBtn" class="fa-solid fa-pencil" onclick="OpenModel('modal-update')"></i>
+                                <i id="DetailBtn" class="fa-solid fa-book" onclick="OpenModel('modal-detail')"></i>
+                                <i id="deleteBtn" class="fa-solid fa-trash" onclick="OpenModel('modal-del')"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+    <div id="modal-add" class="modal-wrap">
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="modal-title">
+                <h3>Thêm sản phẩm</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-customer">
+                    <div class="input-wrap">
+                        <label for="name">Tên <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtName" type="text" placeholder="Tên sản phẩm.......">
+                        </div>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label for="job">Giá <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtJob" type="text" placeholder="Giá sản phẩm.......">
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="image">Ảnh <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="fileImage" type="file" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="img-show">
+                        <img id="avatarBoxPreview" src="" width="300">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-modal">
+                    <button class="add-btn" id="add" onclick="">Thêm</button>
+                    <button class="out-btn" id="out" onclick="CloseModel('modal-add')">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-update" class="modal-wrap">
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="modal-title">
+                <h3>Cập nhập sản phẩm</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-customer">
+                    <div class="input-wrap">
+                        <label for="name">Tên <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtName" type="text" placeholder="Tên sản phẩm......." value="Polo Ruben - Relaxed fit - Xanh">
+                        </div>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label for="job">Giá <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtJob" type="text" placeholder="Giá sản phẩm......." value="480,000 ₫">
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="image">Ảnh <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="fileImage" type="file" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="img-show">
+                        <img id="avatarBoxPreview" src="https://mcdn.nhanh.vn/store3/105877/ps/20220614/HWHA0726_copy.jpg" width="300">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-modal">
+                    <button class="add-btn" id="add" onclick="">Lưu</button>
+                    <button class="out-btn" id="out" onclick="CloseModel('modal-update')">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-del" class="modal-wrap ">
+        <div class="overlay"></div>
+        <div class="modal modal-del">
+            <h3>Xác nhận muốn xóa ?</h3>
+            <div class="img-box">
+                <img width="100%"
+                    src="https://www.pinclipart.com/picdir/big/7-77559_no-symbol-computer-icons-traffic-sign-no-symbol.png"
+                    alt="">
+            </div>
+            <div class="button-modal">
+                <button class="del-btn" id="del" onclick="CloseModel('modal-del')">Xóa</button>
+                <button class="out-btn" id="out-del-modal" onclick="CloseModel('modal-del')">Hủy</button>
+            </div>
+
+        </div>
+    </div>
+    <div id="modal-detail" class="modal-wrap">
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="modal-title">
+                <h3>Chi tiết sản phẩm</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-customer">
+                    <div class="input-wrap">
+                        <label for="name">Tên <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtName" type="text" placeholder="Tên sản phẩm......." value="Polo Ruben - Relaxed fit - Xanh" disabled>
+                        </div>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label for="job">Giá <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtJob" type="text" placeholder="Giá sản phẩm......." value="480,000 ₫" disabled>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="image">Ảnh <code>(*)</code> :</label>
+
+                    </div>
+                    <div class="img-show">
+                        <img id="avatarBoxPreview" src="https://mcdn.nhanh.vn/store3/105877/ps/20220614/HWHA0726_copy.jpg" width="300">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-modal">
+                    <button class="out-btn" id="out" onclick="CloseModel('modal-detail')">Quay lại</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./Modal.js"></script>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <title>Quản lý bán hàng</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./Style/admin.css">
+</head>
+
+<body>
+    <style>
+        .row {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            margin-right: -0.75rem !important;
+            margin-left: -0.75rem !important;
+        }
+    </style>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span>Highway</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="./admin.html" class="active"><span class="las la-igloo"></span><span>Trang chủ</span></a>
+                </li>
+                <li>
+                    <a href="./customers.html"><span class="las la-user"></span><span>Nhân viên</span></a>
+                </li>
+                <li>
+                    <a href="./product.html"><span class="las la-clipboard-list"></span><span>Sản phẩm</span></a>
+                </li>
+
+                <li>
+                    <a href="./Account.html"><span class="las la-user-circle"></span><span>Tài khoản</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                Trang chủ
+            </h2>
+        </header>
+        <main>
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Doanh thu
+                                        tháng</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">44,005,000đ</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="las la-clipboard-list text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Tổng lượt mua
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">1240</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="las la-shopping-bag text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">TB đánh giá
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">4.5</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="lab la-google-wallet text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Số khách quay
+                                        lại</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">458</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="las la-users text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                Doanh thu theo tháng
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="LineChart" width="400" height="180"></canvas>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                5 sản phẩm được mua nhiều
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="PieChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                Danh sách chi nhánh
+                            </h6>
+                            </span></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Shop</td>
+                                            <td>Quản Lý</td>
+                                            <td>Trạng Thái</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>100 Đông Các - Hà Nội</td>
+                                            <td>Gia Linh</td>
+                                            <td class="text-success">
+                                                Hoạt động</td>
+                                        </tr>
+                                        <tr>
+                                            <td>109 Lò Đúc - Hà Nội</td>
+                                            <td>Minh Quang</td>
+                                            <td class="text-success">
+                                                Hoạt động</td>
+                                        </tr>
+                                        <tr>
+                                            <td>40E Ngô Đức Kê -HCM</td>
+                                            <td>Tiến Sơn</td>
+                                            <td class="text-danger">
+                                                Đóng cửa</td>
+                                        </tr>
+                                        <tr>
+                                            <td>367 Lê Văn Sỹ - HCM</td>
+                                            <td>Nam Đăng
+                                            <td class="text-warning"></span>
+                                                Tạm dừng
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>66 Lê Thị Riêng - HCM</td>
+                                            <td>Lê Văn Quyết</td>
+                                            <td class="text-danger">
+                                                Đóng cửa</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                Danh sách nhân viên
+                            </h6>
+                            <button> <a href="customers.html">Tất cả</a> <span
+                                    class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card-body h-100 overflow-auto">
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="https://tse4.mm.bing.net/th?id=OIP.vc8FnJFZ9QfW1w3iesDMmAHaE8&pid=Api&P=0&w=235&h=157"
+                                        width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Tien Sơn</h4>
+                                        <small>Quản lý</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-cicrle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="https://tse4.mm.bing.net/th?id=OIP.vc8FnJFZ9QfW1w3iesDMmAHaE8&pid=Api&P=0&w=235&h=157"
+                                        width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Lê Văn Quyết</h4>
+                                        <small>Nhân Viên</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-cicrle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="https://tse4.mm.bing.net/th?id=OIP.vc8FnJFZ9QfW1w3iesDMmAHaE8&pid=Api&P=0&w=235&h=157"
+                                        width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Đăng Nam</h4>
+                                        <small>Chủ tịch</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-cicrle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const data = {
+            datasets: [{
+                label: 'Doanh thu',
+                borderColor: 'rgb(255, 99, 132)',
+
+                data: [{ x: "2016-12-25", y: 300000 }, { x: "2016-12-28", y: 1000000 }, { x: "2016-12-29", y: 800000 }, { x: "2016-12-30", y: 2004000 }, { x: "2017-1-3", y: 2000000 }, { x: "2017-1-5", y: 3000000 }, { x: "2017-1-8", y: 4000005 }],
+            }
+            ]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+            }
+        };
+
+        const myChart = new Chart(
+            document.getElementById('LineChart'),
+            config
+        );
+
+        const data1 = {
+            labels: [
+                'Áo polo a',
+                'Mũ teen',
+                'Áo pajima',
+                'Thắt lưng rồng',
+                'Ví cá sấu',
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 50, 100, 40, 80],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(30, 205, 86)',
+                    'rgb(100, 205, 50)',
+                    'rgb(150, 205, 10)',
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const config1 = {
+            type: 'doughnut',
+            data: data1,
+        };
+        const PieChart = new Chart(
+            document.getElementById('PieChart'),
+            config1
+        );
+    </script>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>

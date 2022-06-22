@@ -1,0 +1,150 @@
+
+.modal-wrap{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal-wrap.active{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay{
+    position: fixed;
+    background-color: black;
+    opacity: 0.4;
+    inset: 0;
+    z-index: 100;
+}
+
+.modal{
+    position: relative;
+    background-color: white;
+    z-index: 1000;
+    border-radius: 10px;
+    /* padding: 20px; */
+}
+.modal-del{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-del .img-box{
+    width: 50px;
+    height: 50px;
+}
+.modal-del .button-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.modal-del .button-modal .del-btn{
+    color: white;
+    background-color: red;
+    border: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-del .button-modal .out-btn{
+    color: white;
+    background-color: #ccc;
+    border: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal h3{
+    text-align: center;
+}
+.form-customer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px1 10px;
+    border-radius: 10px;
+}
+.input-customer{
+    background-color: #ccc;
+    border-radius: 10px;
+}
+.input-customer input{
+    background-color: transparent;
+    border: none;
+    padding: 10px 5px;
+}
+.input-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input-wrap label{
+    font-size: 12px;
+}
+.input-customer input:focus{
+    outline: none;
+}
+.button-modal .add-btn{
+    padding: 10px 15px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(23, 119, 23);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-modal button:hover{
+    opacity: 0.8;
+}
+.button-modal{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.button-modal .out-btn{
+    padding: 10px 15px;
+    color: white;
+    font-weight: 600;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-title{
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+    margin-bottom: 10px;
+}
+
+.modal-body{
+    padding: 20px;
+}
+
+.modal-footer{
+    padding: 20px;
+    box-shadow: 2px -2px 5px rgb(0 0 0 / 20%);
+}
+
+.img-show{
+    text-align: center;
+}
+
+.img-show img{
+    width: 150px;
+    border-radius: 10px;
+}

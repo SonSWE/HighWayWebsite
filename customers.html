@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./Style/admin.css">
+    <link rel="stylesheet" href="./Style/Modal.css">
+    <title>Admin</title>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span>Highway</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="./admin.html"><span class="las la-igloo"></span><span>Trang chủ</span></a>
+                </li>
+                <li>
+                    <a href="./customers.html" class="active"><span class="las la-user"></span><span>Nhân
+                            viên</span></a>
+                </li>
+                <li>
+                    <a href="./product.html"><span class="las la-clipboard-list"></span><span>Sản phẩm</span></a>
+                </li>
+
+                <li>
+                    <a href="./Account.html"><span class="las la-user-circle"></span><span>Tài khoản</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                Danh sách nhân viên
+            </h2>
+            <div class="user-wapper">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.vc8FnJFZ9QfW1w3iesDMmAHaE8&pid=Api&P=0&w=251&h=167"
+                    width="40px" height="40px" alt="">
+                <div>
+                    <h4 style="white-space:nowrap ;">Gia Linh</h4>
+                    <small style="white-space:nowrap ;">Admin Ghost</small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="form-button">
+                <div class="search-wapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Tìm kiếm" />
+                </div>
+                <div class="button-box">
+                    <button class="btn-add-product" onclick="OpenModel('modal-add');">Thêm mới</button>
+                </div>
+            </div>
+            <div class="customers">
+                <div class="card shadow-sm">
+                    <div class="card-header">
+                        <h3>Kết quả tìm kiếm</h3>
+                    </div>
+                    <div class="card-body" style="padding: 0;">
+                        <table class="tableizer-table">
+                            <thead>
+                                <tr class="tableizer-firstrow">
+                                    <th>Ảnh đại diện</th>
+                                    <th>Tên nhân viên</th>
+                                    <th>Chức vụ</th>
+                                    <th>Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tblBody">
+                                <tr>
+                                    <td><img class="avt-rd"
+                                            src="./images/face11.jpg">
+                                    </td>
+                                    <td>aliceblue</td>
+                                    <td>#F0F8FF</td>
+                                    <td>
+                                        <div class="contact">
+                                            <i id="updateBtn" class="fa-solid fa-pencil"></i>
+                                            <i id="DetailBtn" class="fa-solid fa-book"></i>
+                                            <i id="deleteBtn" class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="avt-rd" src="./images/faces/face10.jpg">
+                                    </td>
+                                    <td>antiquewhite</td>
+                                    <td>#FAEBD7</td>
+                                    <td>
+                                        <div class="contact">
+                                            <i id="updateBtn" class="fa-solid fa-pencil" onclick=""></i>
+                                            <i id="DetailBtn" class="fa-solid fa-book"></i>
+                                            <i id="deleteBtn" class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="modal-add" class="modal-wrap">
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="modal-title">
+                <h3>Thêm Thành Viên</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-customer">
+                    <div class="input-wrap">
+                        <label for="name">Tên nhân viên <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtName" type="text" placeholder="Tên Nhân viên.......">
+                        </div>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label for="job">Chức vụ <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtJob" type="text" placeholder="Điền Công việc.......">
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="image">Ảnh đại diện <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="fileImage" type="file" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="img-show">
+                        <img id="avatarBoxPreview" src="" width="300">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-modal">
+                    <button class="add-btn" id="add" onclick="DoAdd()">Thêm</button>
+                    <button class="out-btn" id="out" onclick="CloseModel('modal-add')">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-update" class="modal-wrap">
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="modal-title">
+                <h3>Cập nhập thông tin</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-customer">
+                    <input id="txtIdUpdate" hidden>
+                    <div class="input-wrap">
+                        <label for="name">Tên nhân viên <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtNameUpdate" type="text" placeholder="Tên Nhân viên.......">
+                        </div>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label for="job">Chức vụ <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="txtJobUpdate" type="text" placeholder="Điền Công việc.......">
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="image">Ảnh đại diện <code>(*)</code> :</label>
+                        <div class="input-customer">
+                            <input id="fileImageUpdate" type="file" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="img-show">
+                        <img id="avatarBoxUpdate" src="" width="300">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-modal">
+                    <button class="add-btn" id="add" onclick="DoUpdate()">Cập nhập</button>
+                    <button class="out-btn" id="out" onclick="CloseModel('modal-update')">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-del" class="modal-wrap ">
+        <div class="overlay"></div>
+        <div class="modal modal-del">
+            <input id="txtIdDelete" hidden>
+            <h3>Xác nhận muốn xóa ?</h3>
+            <div class="img-box">
+                <img width="100%"
+                    src="https://www.pinclipart.com/picdir/big/7-77559_no-symbol-computer-icons-traffic-sign-no-symbol.png"
+                    alt="">
+            </div>
+            <div class="button-modal">
+                <button class="del-btn" id="del" onclick="DoDelete()">Xóa</button>
+                <button class="out-btn" id="out-del-modal" onclick="CloseModel('modal-del')">Hủy</button>
+            </div>
+
+        </div>
+    </div>
+    <div id="modal-view" class="modal-wrap">
+        <div class="overlay"></div>
+        <div class="modal">
+            <div class="modal-title">
+                <h3>Thông tin chi tiết nhân viên</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-customer">
+                    <div class="img-show">
+                        <img id="avatarBox"
+                            src="https://tse4.mm.bing.net/th?id=OIP.vc8FnJFZ9QfW1w3iesDMmAHaE8&pid=Api&P=0&w=251&h=167"
+                            width="300">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="name">Tên nhân viên</label>
+                        <div class="input-customer">
+                            <input id="txtNameView" type="text" placeholder="Tên Nhân viên......." value="" disabled>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="job">Chức vụ</label>
+                        <div class="input-customer">
+                            <input id="txtJobView" type="text" placeholder="Điền Công việc......." disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="button-modal">
+                    <button class="out-btn" id="out-fix-modal" onclick="CloseModel('modal-view')">Quay lại</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./scripts/Modal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var tmppath;
+    var tmppathUpdate;
+    $('#fileImage').change(function (event) {
+        tmppath = URL.createObjectURL(event.target.files[0]);
+        $("#avatarBoxPreview").attr("src", tmppath);
+    });
+
+    $('#fileImageUpdate').change(function (event) {
+        tmppathUpdate = URL.createObjectURL(event.target.files[0]);
+        $("#avatarBoxUpdate").attr("src", tmppathUpdate);
+    });
+    $(document).ready(function () {
+        RenderTbody()
+    });
+    var _lstData = [
+        {
+            id: 1,
+            name: "Gia Linh",
+            ava: "./images/face10.jpg",
+            position: "Quản lý"
+        },
+        {
+            id: 2,
+            name: "Tien Son",
+            ava: "./images/face9.jpg",
+            position: "Nhân viên"
+        },
+        {
+            id: 3,
+            name: "Nam Dang",
+            ava: "./images/face8.jpg",
+            position: "Quản lý chi nhánh"
+        },
+        {
+            id: 4,
+            name: "Van Quyet",
+            ava: "./images/face14.jpg",
+            position: "Quản lý kinh doanh"
+        }
+    ]
+
+    function DoAdd() {
+
+        if (!$("#txtName").val().trim()) {
+            alert("Tên không được để trống");
+            return;
+        }
+        if (!$("#txtJob").val()) {
+            alert("Chức vụ không được để trống");
+            return;
+        }
+        if (!$('#fileImage').prop('files')[0]) {
+            alert("Bạn phải chọn ảnh đại diện");
+            return;
+        }
+
+        var _nextId = Math.max(..._lstData.map(e => e.id)) + 1;
+        var el = {
+            id: _nextId,
+            name: $('#txtName').val(),
+            ava: tmppath,
+            position: $('#txtJob').val()
+        }
+
+        _lstData.push(el);
+        RenderTbody();
+        CloseModel('modal-add')
+    }
+
+    function DoUpdate() {
+
+        if (!$("#txtNameUpdate").val().trim()) {
+            alert("Tên không được để trống");
+            return;
+        }
+        if (!$("#txtJobUpdate").val()) {
+            alert("Chức vụ không được để trống");
+            return;
+        }
+
+        _lstData.forEach(function (e, k) {
+            if (e.id == $('#txtIdUpdate').val()) {
+                e.name = $('#txtNameUpdate').val();
+                if (tmppathUpdate) { e.ava = tmppathUpdate; }
+                e.position = $('#txtJobUpdate').val();
+            }
+        })
+        RenderTbody();
+        CloseModel('modal-update')
+    }
+
+    function ShowModalDelete(id) {
+        $('#txtIdDelete').val(id);
+        OpenModel("modal-del");
+    }
+
+    function DoDelete() {
+        var id = $('#txtIdDelete').val();
+
+        for (var i = 0; i < _lstData.length; i++) {
+            if (_lstData[i].id == id) {
+                _lstData.splice(i, 1);
+                i--;
+            }
+        }
+        CloseModel('modal-del')
+        RenderTbody();
+    }
+
+    function RenderTbody() {
+        let tbodyStr = "";
+        _lstData.forEach(function (e, k) {
+            tbodyStr += `<tr>
+                <td><img class="avt-rd" src="${e.ava}"></td>
+                <td>${e.name}</td>
+                <td>${e.position}</td>
+                <td>
+                    <div class="contact">
+                        <i id="updateBtn" class="fa-solid fa-pencil" onclick="ShowModalUpdate(${e.id})"></i>
+                        <i id="DetailBtn" class="fa-solid fa-book" onclick="ShowModalView(${e.id})"></i>
+                        <i id="deleteBtn" class="fa-solid fa-trash" onclick="ShowModalDelete(${e.id})"></i>
+                    </div>
+                </td>
+            </tr>`;
+        });
+
+        $('#tblBody').html(tbodyStr);
+
+    }
+
+    function ShowModalUpdate(id) {
+        var el = _lstData.find(e => e.id == id);
+        if (!el) {
+            return;
+        }
+
+        $('#txtNameUpdate').val(el.name);
+        $('#txtJobUpdate').val(el.position);
+        $('#txtIdUpdate').val(el.id);
+        $("#avatarBoxUpdate").attr("src", el.ava);
+        OpenModel("modal-update");
+    }
+
+    function ShowModalView(id) {
+        var el = _lstData.find(e => e.id == id);
+        if (!el) {
+            return;
+        }
+
+        $('#txtNameView').val(el.name);
+        $('#txtJobView').val(el.position);
+        $("#avatarBox").attr("src", el.ava);
+        OpenModel("modal-view");
+    }
+</script>
+
+</html>
