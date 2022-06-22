@@ -1,0 +1,52 @@
+.story-header{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.header-time{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.header-time span{
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+.header-time .line{
+    height: 1px;
+    background-color: #ccc;
+    max-width: 100px;
+    width: 100%;
+}
+.story-content{
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+.story-content p{
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+.story-content ul{
+    color: black;
+  
+}
+.story-content ul li {
+    padding: 3px 0;
+}
+.story-content ul li:before {
+    /* Unicode bullet symbol */
+    content: '\2022 ';
+    /* Bullet color */
+    color: black;
+    padding-right: 0.5em;
+}
+.story-content h2{
+    font-size: 1.4rem;
+    margin: 20px 0;
+    color: var(--main-color);
+}

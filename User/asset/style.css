@@ -1,0 +1,199 @@
+
+.banner-wrap img{
+    max-width: 100%;
+}
+.slick-slider.banner{
+    margin-top:calc(var(--header-height) - 3px) ;
+    position: relative;
+}
+.slick-slider .slick-arrow{
+   display: none!important;
+}
+.slick-slider .slick-dots{
+    width: 100%;
+    display: flex!important;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+}
+.slick-dots button{
+    background-color: #eee;
+    font-size: 0;
+    padding: 3px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+}
+.slick-dots .slick-active button{
+    background-color: rgb(204, 171, 171);
+}
+.content-accessories{
+    margin-top: 30px;
+}
+.accessories-wrap,.shop-wrap{
+    padding: 0;
+    position: relative;
+}
+.accessories-name{
+    cursor: pointer;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translateX(-50%);
+    color: white;
+}
+.accessories-name h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+.content-new,.content-shop,.feed-header{
+    margin-top: 50px;
+    text-align: center;
+}
+.new-header h3{
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.new-header a{
+    font-size: 1.4rem;
+    display: block;
+    margin: 10px 0 20px;
+    color: #000000;
+}
+.shop-headerr h3{
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.feed-header h3{
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.shop-header a{
+    font-size: 1.4rem;
+    display: block;
+    margin: 10px 0 20px;
+    color: #000000;
+}
+.feed-header a{
+    font-size: 1.4rem;
+    display: block;
+    margin: 10px 0 20px;
+    color: #000000;
+}
+.new-slider{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:10px;
+}
+.product-item{
+    margin: 0 10px;
+}
+.product-content{
+    padding: 10px 0;
+}
+.product-content span{
+    font-size: 1.2rem;
+    color:#000;
+    text-transform: uppercase;
+}
+.product-content h3{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 2px 0;
+}
+.product-card{
+    cursor: pointer;
+}
+.product-img{
+    position: relative;
+    background-color: var(--white-color);
+}
+.swatch-img_wrap{
+    width: 20%;
+}
+.swatch-img_wrap img{
+    object-fit: contain;
+}
+.swatch-img{
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 70px;
+    transition: .5s ease all;
+    transform: scaleY(0);
+    overflow: hidden;
+    transform-origin: bottom;
+    
+}
+.product-img:hover .swatch-img{
+    transform: scaleY(1);
+}
+.shop-wrap{
+    cursor: pointer;
+}
+.shop-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+.shop-wrap:hover .shop-content{
+    opacity: 1;
+}
+.shop-content h3{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    z-index: 10;
+}
+.instagram-wrap{
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+}
+.instagram-box{
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-out;
+}
+.instagram-wrap:hover .instagram-box{
+    opacity: 1;
+    z-index: 100;
+}
+.instagram-box button{
+    border: 1px solid var(--white-color);
+    padding: 5px 10px;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    z-index: 10;
+}
+.auto-slider .slick-track{
+    gap: 10px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}

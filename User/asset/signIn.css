@@ -1,0 +1,117 @@
+.form-signin{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+}
+.form-signin.active{
+    display: block;
+}
+.overlay-white{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background: rgba(240,240,240,.8);
+}
+.modal-signIn{
+    z-index: 1000;
+}
+.sign-in{
+    display: none;
+}
+.sign-in.active{
+    display: flex;
+}
+.sign-up{
+    display: none;
+}
+.sign-up.active{
+    display: flex;
+}
+.modal-signIn{
+    color: white;
+    width: 800px;
+    padding: 51px 20px;
+    height: 456px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    max-width: 90%;
+    background: #000;
+}
+.form-submit{
+    padding: 10px 20px;
+}
+.form-submit h3{
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.form-submit span{
+    margin-bottom: 20px;
+}
+.input-wrap{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.input-wrap input{
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+}
+.input-wrap input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  .input-wrap input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  .input-wrap input::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+  .input-wrap .line{
+    margin: 10px 0;
+  }
+  .btn-submit{
+    background: 0 0;
+    border: none;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 0 0 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+
+  }
+  .forget-btn a{
+    color: #ccc;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .forget-btn a:hover{
+    opacity: 0.4;
+  }
+  .form-submit p{
+    font-size: 14px;
+  }

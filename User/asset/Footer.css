@@ -1,0 +1,79 @@
+.footer-container{
+    background-color: var(--black-color);
+    padding: 20px 30px;
+}
+.footer-content_box.row{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-img{
+    max-width: 200px;
+   
+}
+.img-box{
+    display: flex;
+    justify-content: center;
+}
+.footer-contact{
+    color: white;
+}
+.footer-contact h3{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.footer-contact span{
+    font-size: 1.4rem;
+}
+.input-footer{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--white-color);
+}
+.input-footer input{
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    flex: 1;
+    background-color: transparent;
+}
+.input-footer button{
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    background-color: var(--black-color);
+    color: var(--white-color);
+
+}
+@media screen and (max-width:767px) {
+    .about-footer{
+        margin-top: 20px;
+        display: flex;   
+    }
+}
+@media screen and (min-width:768px) {
+    .about-footer{
+        display: flex;
+        justify-content: center;
+        color: var(--white-color);
+    }
+}
+
+.about-footer h3{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.about-footer ul{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.about-footer ul a{
+    color: white;
+    font-size: 1.2rem;
+}

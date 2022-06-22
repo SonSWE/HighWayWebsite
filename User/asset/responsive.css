@@ -1,0 +1,23 @@
+@media only screen and (min-width: 889px) {
+    .header-responsive{
+        display: none;
+    }
+    .header{
+        display: block;
+    }
+    .banner-wrap{
+        height: 100vh;
+    }
+}
+@media only screen and (max-width: 888px) {
+    .header-responsive{
+        display: block;
+    }
+    .header{
+        display: none;
+    }
+    .banner-wrap{
+        height: auto;
+    }
+}
+

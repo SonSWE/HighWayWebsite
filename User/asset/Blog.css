@@ -1,0 +1,49 @@
+.container-blog{
+    margin: 20px 0;
+}
+.blog-title{
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.blog-title h3{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.title-line{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+.new-box{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px ;
+    padding-right: 25px;
+    gap: 20px;
+    align-items: center;
+    max-height: 650px;
+    margin-bottom: 20px;
+}
+.new-img{
+    overflow: hidden;
+   
+}
+.new-img img{
+    transition: all 0.7s ease-out;
+}
+.new-img:hover img{
+    transform: scale(1.2);
+   
+}
+.new-title h3{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight:bold;
+    padding: 0 10px;
+}
