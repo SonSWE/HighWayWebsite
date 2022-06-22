@@ -109,7 +109,31 @@
     padding: 2px 0;
 }
 .product-card{
+    position: relative;
     cursor: pointer;
+}
+.product-card .sale{
+    top: 10px;
+    left: 5px;
+    position: absolute;
+    background-color: black;
+    font-size: 10px;
+    color: white;
+    font-weight: 400;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.product-card .sale h3{
+    font-size: 10px;
+    color: white;
+    font-weight: 400;
+    border-radius: 100%;
+}
+.product-list a:hover{
+    color: black;
 }
 .product-img{
     position: relative;
