@@ -57,17 +57,17 @@ const SignUpBtn = document.querySelector('#sign-btn')// Nut dang ky
 const OpenFormBtn = document.querySelector('#btn-open-form') // nut dang nhap
 const overlayForm = document.querySelector('.overlay-white') // Overlay trang
 
-OpenFormBtn.addEventListener('click',(e)=>{
+OpenFormBtn.addEventListener('click',(e)=>{ // them su kien click cho nut dang nhap
     e.preventDefault()
-    ModalSignIN.classList.add('active')
+    ModalSignIN.classList.add('active') // add class active
 
 })
 SignUpBtn.addEventListener('click',()=>{
-    signInForm.classList.remove('active')
+    signInForm.classList.remove('active') // bo class active
     signUpForm.classList.add('active')
 })
 overlayForm.addEventListener('click',()=>{
-    ModalSignIN.classList.remove('active')
+    ModalSignIN.classList.remove('active') // bo class active
 })
 
 
