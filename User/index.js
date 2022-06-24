@@ -3,6 +3,9 @@ const searchBtn = document.querySelector('.btn-header-responsive.search')
 const headerMB = document.querySelector('.header-menu-responsive')
 const boxSearch =  document.querySelector('.box-search')
 const overlay = document.querySelector('.overlay')
+
+
+
 btnShowHead.addEventListener('click',()=>{
     headerMB.classList.add('active')
     overlay.classList.add('show')
@@ -32,7 +35,6 @@ MenuResBtn1.forEach((item,index)=>{
 })
 const MenuResBtn2 = document.querySelectorAll('#menu-response-btn-2')
 const MenuHead2 = document.querySelectorAll('#second-menu-smaller-2')
-console.log(MenuHead2)
 MenuResBtn2.forEach((item,index)=>{
     item.addEventListener('click',()=>{
         if(MenuHead2[index].classList.contains('active')){
@@ -47,12 +49,19 @@ MenuResBtn2.forEach((item,index)=>{
 
 
 // Open modal signIn
-const ModalSignIN = document.querySelector('.form-signin');
-const signInForm = document.querySelector('#sign-in_form')
-const signUpForm = document.querySelector('#sign-up_form')
-const SignUpBtn = document.querySelector('#sign-btn')
-const OpenFormBtn = document.querySelector('#btn-open-form')
-const overlayForm = document.querySelector('.overlay-white')
+
+const ModalSignIN = document.querySelector('.form-signin'); //form dang nhap
+const signInForm = document.querySelector('#sign-in_form') // Cho dang nhap
+const signUpForm = document.querySelector('#sign-up_form') // Cho dang ky
+const SignUpBtn = document.querySelector('#sign-btn')// Nut dang ky
+const OpenFormBtn = document.querySelector('#btn-open-form') // nut dang nhap
+const overlayForm = document.querySelector('.overlay-white') // Overlay trang
+
+OpenFormBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    ModalSignIN.classList.add('active')
+
+})
 SignUpBtn.addEventListener('click',()=>{
     signInForm.classList.remove('active')
     signUpForm.classList.add('active')
@@ -60,7 +69,23 @@ SignUpBtn.addEventListener('click',()=>{
 overlayForm.addEventListener('click',()=>{
     ModalSignIN.classList.remove('active')
 })
-OpenFormBtn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    ModalSignIN.classList.add('active')
-})
+
+
+
+// admin
+function DoLogin(){
+    const usernameInput = document.querySelector('#username')
+    const passwordInput = document.querySelector('#password')
+    if(usernameInput.value === "admin" && passwordInput.value === "admin") {
+        location.href = '../admin.html';
+    }
+    else{
+        alert("Tài khoản mật khẩu không chính xác")
+    }
+
+}
+DoLogin();
+
+//user
+
+

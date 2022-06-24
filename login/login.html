@@ -14,28 +14,28 @@
         </div>
         <div class="contentbx"> 
             <div class="formbx">
-                <h2>Login</h2>
+                <h2>Đăng nhập</h2>
                 <form>
                     <div class="inputbx">
-                        <span>Username</span>
-                        <input type="text" name="">
+                        <span>Tài khoản</span>
+                        <input id="username" type="text" name="">
                     </div>
                     <div class="inputbx">
-                        <span>Password</span>
-                        <input type="password" name="">
+                        <span>Mật khẩu</span>
+                        <input id="password" type="password" name="">
                     </div>
                     <div class="remember">
-                        <label><input type="checkbox" name="">Remember me</label>
+                        <label><input type="checkbox" name="">Nhớ tài khoản</label>
                     </div>
                     <div class="inputbx">
-                        <a href="../admin.html" type="submid">
-                            Sign in
+                        <a onclick="DoLogin()"  type="submid">
+                            Đăng nhập
                         </a>
                       
                     </div>
                     <div class="inputbx-sign-up ">
-                        <p>Don't have an account ?</p>
-                        <a href="#">Sign up</a>
+                        <p>Không có tài khoản ?</p>
+                        <a  >Đăng Ký</a>
                     </div>
                 </form>
     
@@ -43,4 +43,5 @@
         </div> 
     </section>
 </body>
+<script src="../User/index.js"></script>
 </html>
