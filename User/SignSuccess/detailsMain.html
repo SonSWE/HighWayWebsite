@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./asset/main.css">
-    <link rel="stylesheet" href="./asset/style.css">
-    <link rel="stylesheet" href="./asset/responsive.css">
-    <link rel="stylesheet" href="./asset/Header.css">
-    <link rel="stylesheet" href="./asset/Footer.css">
-    <link rel="stylesheet" href="./asset/signIn.css">
-    <title>Highway Menswear</title>
+    <link rel="stylesheet" href="../asset/main.css">
+    <link rel="stylesheet" href="../asset/responsive.css">
+    <link rel="stylesheet" href="../DetailStyle.css">
+    <link rel="stylesheet" href="../asset/style.css">
+    <link rel="stylesheet" href="../asset/Header.css">
+    <link rel="stylesheet" href="../asset/Footer.css">
+    <link rel="stylesheet" href="../asset/signIn.css">
+    <title>Document</title>
 </head>
 <body>
     <div class="overlay"></div>
@@ -38,10 +39,8 @@
                     <div class="forget-btn">
                         <a href="">Quên mật khẩu ?</a>
                     </div>
-                    <a href="./SignSuccess/Main.html">
-                        <button class="btn-submit text-hover">Đăng nhập</button>
-                    </a>
                     
+                    <button class="btn-submit text-hover">Đăng nhập</button>
                 </div>
                 <div class="col-md-6 form-submit">
                     <h3>Khách hàng Mới</h3>
@@ -93,7 +92,7 @@
                         </div>
                     </div>
                     <div style="display:flex;justify-content:flex-end">
-                        <button  class="btn-submit text-hover">Đăng nhập</button> 
+                        <button id="sign-up" class="btn-submit text-hover">Đăng nhập</button> 
                     </div>
                    
             </div>
@@ -136,10 +135,10 @@
                         
                     </li>
                     <li class="header-list-item">
-                        <a href="./productsPage.html" class="header-list-link">Hàng mới</a>
+                        <a href="./productsPageMain.html" class="header-list-link">Hàng mới</a>
                     </li>
                     <li class="header-list-item">
-                        <a href="./productsPage.html" class="header-list-link text-hover">Sản phẩm</a>
+                        <a href="./productsPageMain.html" class="header-list-link text-hover">Sản phẩm</a>
                         <div class="second-wrap ">
                             <ul class="second-list row">
                                 <li class="second-list-item col-xl-2">
@@ -245,17 +244,17 @@
                 </ul>
             </div>
            <div class="logo">
-                <a href="./index.html">
+                <a href="./Main.html">
                     <img src="https://mcdn.nhanh.vn/store3/105877/logo_1630246666_banner highway.png" alt="">
                 </a>
            </div>
             <div class="header-right">
                 <ul class="header-list">
                     <li class="header-list-item">
-                        <a href="./blog.html" class="header-list-link">Tin tức</a>
+                        <a href="./blogMain.html" class="header-list-link">Tin tức</a>
                     </li>
                     <li class="header-list-item">
-                        <a href="#" id="btn-open-form" class="header-list-link">Đăng nhập</a>
+                        <a href="#" id="btn-open-form" class="header-list-link">Đăng Nam</a>
                     </li>
                     <li class="header-list-item">
                         <a href="#" class="header-list-link">Giỏ hàng</a>
@@ -282,7 +281,7 @@
                 <ul class="header-list-smaller">
                     <li class="header-item-smaller">
                         <div id="menu-response-btn-1" class="flex">
-                             <a class="header-link-smaller" href="./productsPage.html">SALE</a>
+                             <a class="header-link-smaller" href="./productsPageMain.html">SALE</a>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div id="second-menu-smaller-1" class="second-menu-smaller">
@@ -309,7 +308,7 @@
                     </li>
                     <li class="header-item-smaller">
                         <div id="menu-response-btn-1" class="flex">
-                             <a class="header-link-smaller" href="./productsPage.html">SẢN PHẨM</a>
+                             <a class="header-link-smaller" href="./productsPageMain.html">SẢN PHẨM</a>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div id="second-menu-smaller-1"  class="second-menu-smaller">
@@ -433,7 +432,7 @@
                 </ul>
             </div>
             <div class="logo">
-                <a href="./index.html">
+                <a href="./Main.html">
                     <img src="https://mcdn.nhanh.vn/store3/105877/logo_1630246666_banner highway.png" alt="">
                 </a>
                 
@@ -448,84 +447,147 @@
             </div>
         </div>
     </header>
-   
-    <div class="banner">
-        <div class="banner-wrap">
-            <img src="https://mcdn.nhanh.vn/store3/105877/bn/HW_BANNERWEB__1_.jpg" alt="" width="100%">
-        </div>
-        <div class="banner-wrap">
-            <img src="https://mcdn.nhanh.vn/store3/105877/bn/Banner_Website_1.jpg" alt="" width="100%">
-        </div>
-        <div class="banner-wrap">
-            <img src="https://mcdn.nhanh.vn/store3/105877/bn/271984205_457647192697920_4013484975870758619_n.jpg" alt="" width="100%">
-        </div>
-        
-    </div >
-
-    <div class="content-accessories">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="accessories-wrap col-md-6 col-sm-12">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/159019325_1881692711986996_1375505509539543465_n.jpg" alt="">
-                    <div class="accessories-name  text-hover">
-                        <a href="./productsPage.html">
-                            <h3>Thắt Lưng</h3>
-                        </a>
+    <section class="product">
+        <div class="container-xl">
+            <div class=" row">
+                <div class="product-content-left col-md-7">
+                    <div class="product-content-left-imgbig">
+                        <img src="	https://mcdn.nhanh.vn/store3/105877/ps/20220614/HWHA0093_copy.jpg" alt="">
+                    </div>
+                    <div class="product-content-left-imgsmall">
+                        <!-- <img src="https://phongcachlamdep.com/wp-content/uploads/2021/12/phong-cach-dolce-la-gi-3.jpg" alt="">
+                        <img src="https://hacoled.com/wp-content/uploads/2021/10/man-hinh-lv-cho-dien-thoai-10.jpg" alt=""> -->
                     </div>
                 </div>
-                <div class="accessories-wrap col-md-6 col-sm-12">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/279451710_524851739310798_6060352611151897747_n.jpg" alt="">
-                    <div class="accessories-name text-hover">
-                        <a href="./productsPage.html">
-                            <h3>Giày</h3>
-                        </a>
-                        
+                <div class="product-content-right col-md-4">
+                    <div class="product-content-right-name">
+                        <span style="color:aqua"> <p>Essential</p></span>
+                        <h1>SƠ MI CUBAN - BLUR - REGULAR FIT - ĐEN</h1>                    
+                    </div> 
+                    <div class="product-content-right-price">
+                        <p>465,000<sup>đ</sup></p>
                     </div>
+                    <div class="line"></div>
+                   <div class="product-content-right-size">
+                       <div class="size">
+                            <span>S</span>
+                           <span>M</span>
+                           <span>L</span>
+                           <span>XL</span>  
+                       </div>
+                       <p style="color:red">Vui lòng chọn size</p>
+                       <h3>HƯỚNG DẪN CHỌN KÍCH CỠ</h3>
+                       <p>NGƯỜI MẪU: 183CM 65KG</p>
+                       <p>KÍCH CỠ ÁO: L</p>
+                   </div>
+                   <div class="quantity">
+                       <p style="font-weight:bold">Số lượng</p>
+                       <input type="number" min="0" value="1">
+                      
+                   </div>
+                   <div class="line"></div>
+                   <div class="product-content-right-color-button">
+                       <button>Chọn Mua</button>  
+                    <div class="line"></div>
+                    <div class="product-detail">
+                        <div class="product-info">
+                            <div class="detail-header">
+                                <h3>Thông tin sản phẩm</h3>
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="detail-list">
+                                <p>MÔ TẢ</p>
+                                <p>
+                                    - Làm từ 100% Cotton 2 chiều, thoáng mát và thấm hút mồ hôi tốt.
+                                </p>
+                                <p>
+                                    - Phom Regular phù hợp với mọi dáng người
+                                </p>
+                                <p>
+                                    - Bảng màu đa dạng
+                                </p>
+                                <p>
+                                    - Lưu ý: Giặt máy ở chế độ nhẹ để sản phẩm được bền lâu
+                                </p>
+                                <p>
+                                    - Sản xuất tại Việt Nam
+                                </p>
+                                <p>SỐ ĐO:</p>
+                                <p>
+                                    Size: S - M - L - XL ( Cm )
+                                </p>
+                                <p>
+                                    Size: S - M - L - XL ( Cm ) 
+                                </p>
+                                <p>
+                                    -Dài áo: 70 - 72 - 74 - 76
+                                </p>
+                                <p>
+                                    -Rộng thân áo: 49 - 51 - 53 - 55
+                                </p>
+                                <p>
+                                    -Dài tay: 22 - 23 - 24 - 25
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="content-new">
-        <div class="container-fluid">
-            <div class="new-header">
-                <h3>Sản phẩm mới</h3>
-                <a href="">Xem thêm</a>
-            </div>
-            <div class="row  auto-slider">
-                <div class="col-md-3 col-sm-4 product-card">
-                        <div class="product-img">
-                            <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
-                            <div class="swatch-img">
-                                <div class="swatch-img_wrap">
-                                     <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
+        <div class="product-same">
+            <h3>Sản Phẩm Liên Quan</h3>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3 col-sm-4 product-card">
+                            <div class="product-img">
+                                <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
+                                <div class="swatch-img">
+                                    <div class="swatch-img_wrap">
+                                         <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
+                                    </div>
+                                   
                                 </div>
-                               
+                            </div> 
+                            <div class="product-content">
+                                <span>Essential</span>
+                                <h3>Polo Ruben - Relaxed fit - Xanh</h3>
+                                <span>480,000 ₫</span>
                             </div>
-                        </div> 
-                        <div class="product-content">
-                            <span>Essential</span>
-                            <h3>Polo Ruben - Relaxed fit - Xanh</h3>
-                            <span>480,000 ₫</span>
-                        </div>
-                </div>
-                <div class=" col-md-3 col-sm-4 product-card ">
-                        <div class="product-img">
-                            <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220512/HW08052221705.jpg" alt="">
-                            <div class="swatch-img">
-                                <div class="swatch-img_wrap">
-                                     <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
+                    </div>
+                    <div class=" col-md-3 col-sm-4 product-card ">
+                            <div class="product-img">
+                                <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220512/HW08052221705.jpg" alt="">
+                                <div class="swatch-img">
+                                    <div class="swatch-img_wrap">
+                                         <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
+                                    </div>
                                 </div>
+                            </div> 
+                           
+                            <div class="product-content">
+                                <span>Essential</span>
+                                <h3>Polo Ruben - Relaxed fit - Xanh</h3>
+                                <span>480,000 ₫</span>
                             </div>
-                        </div> 
-                       
-                        <div class="product-content">
-                            <span>Essential</span>
-                            <h3>Polo Ruben - Relaxed fit - Xanh</h3>
-                            <span>480,000 ₫</span>
-                        </div>
-                </div>
-                <div class="col-md-3 col-sm-4 product-card ">
+                    </div>
+                    <div class="col-md-3 col-sm-4 product-card ">
+                            <div class="product-img">
+                                <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220420/_MG_5584.jpg" alt="">
+                                <div class="swatch-img">
+                                    <div class="swatch-img_wrap">
+                                         <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div> 
+                           
+                            <div class="product-content">
+                                <span>Essential</span>
+                                <h3>Polo Ruben - Relaxed fit - Xanh</h3>
+                                <span>480,000 ₫</span>
+                            </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 product-card ">
                         <div class="product-img">
                             <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220420/_MG_5584.jpg" alt="">
                             <div class="swatch-img">
@@ -541,203 +603,11 @@
                             <span>480,000 ₫</span>
                         </div>
                 </div>
-                <div class="col-md-3 col-sm-4 product-card ">
-                        <div class="product-img">
-                            <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220328/HWHA19950.jpg" alt="">
-                            <div class="swatch-img">
-                                <div class="swatch-img_wrap">
-                                     <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
-                                </div>              
-                            </div>
-                        </div> 
-                       
-                        <div class="product-content">
-                            <span>Essential</span>
-                            <h3>Polo Ruben - Relaxed fit - Xanh</h3>
-                            <span>480,000 ₫</span>
-                        </div>
-                </div>
-                <div class="col-md-3 col-sm-4 product-card">
-                    <div class="product-img">
-                        <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
-                        <div class="swatch-img">
-                            <div class="swatch-img_wrap">
-                                 <img src="https://mcdn.nhanh.vn/store3/105877/ps/20220516/HW08052222084.jpg" alt="">
-                            </div>
-                           
-                        </div>
-                    </div> 
-                    <div class="product-content">
-                        <span>Essential</span>
-                        <h3>Polo Ruben - Relaxed fit - Xanh</h3>
-                        <span>480,000 ₫</span>
-                    </div>
-            </div>
-            </div>
-            
-        </div>
-    </div>
-    <div class="content-shop">
-        <div class="container-fluid">
-            <div class="shop-header">
-                    <h3>Store</h3>
-                    <a href="">Xem thêm</a>
-            </div>
-            <div class="shop-slider">
-                <div class="row">
-                   <div class="col-xl-6 shop-wrap">
-                        <img src="https://mcdn.nhanh.vn/store3/105877/bn/255568116_2070525419770390_9061088011580212710_n.jpg" alt="">
-                        <div class="shop-content">
-                            <h3 class="text-hover">109 Lò Đúc - Hà Nội</h3>
-                            <div class="box-overlay"></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 shop-wrap">
-                        <img src="https://mcdn.nhanh.vn/store3/105877/bn/web2.png" alt="">
-                        <div class="shop-content">
-                            <h3 class="text-hover">66 Lê Thị Riêng - HCM</h3>
-                            <div class="box-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    <div class="shop-feed">
-        <div class="container-fluid">
-            <div class="feed-header">
-                <h3>Tin Tức</h3>
-                <a href="">Xem thêm</a>
-            </div>
-            <div class="row feed-slider"  data-slick='{"slidesToShow": 2, "slidesToScroll": 1}'>
-                <div class="col-xl-6 shop-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/Artboard_3.jpg" alt="">
-                    <div class="shop-content">
-                        <a href="./aboutDetailPage/HighwayStory.html">
-                            <h3 class="text-hover">QUẦN VẢI HỢP VỚI NHỮNG DÁNG GIÀY NÀO</h3>
-                        </a>
-                      
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-6 shop-wrap" dir="rtl">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/Artboard_6.jpg" alt="">
-                        <div class="shop-content"><a href="">
-                            <a href="./aboutDetailPage/HighwayStory.html">
-                                <h3 class="text-hover" >NGÀNH IN ẤN TRONG THỜI TRANG ĐƯỢC PHÁT TRIỂN NHƯ THẾ NÀO</h3>
-                            </a>
-                          
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-6 shop-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/Artboard_2.jpg" alt="">
-                    <div class="shop-content">
-                        <a href="./aboutDetailPage/HighwayStory.html">
-                            <h3 class="text-hover">NHỮNG CÁCH PHỐI ĐỒ VỚI SƠ MI CUBAN MÙA HÈ</h3>
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-6 shop-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/Artboard_4.jpg" alt="">
-                    <div class="shop-content">
-                        <a href="./aboutDetailPage/HighwayStory.html">
-                            <h3 class="text-hover">NHỮNG BỘ PHIM BẠN NÊN XEM ĐỂ MẶC ĐẸP NHƯ SAO</h3>
-                        </a>
-                    
-                        <div class="box-overlay"></div>
-                    </div>
                 </div>
             </div>
            
         </div>
-    </div>
-    <div class="content-instagram">
-        <div class="container-fluid">
-            <div class="feed-header">
-                <h3>Instagram</h3>
-                <a href="">Xem thêm</a>
-            </div>
-            <div class="row insta-slider">
-                <div class="col-xl-2 instagram-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/test2__31_.jpg" alt="">
-                    <div class="instagram-box">
-                        <a href="./productsPage.html">
-                            <button class="">Shop Now</button>
-                        </a>
-                       
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-2 instagram-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/4.JPEG" alt="">
-                    <div class="instagram-box">
-                        <a href="./productsPage.html">
-                            <button class="">Shop Now</button>
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-2 instagram-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/IMG_4408 (1).JPG" alt="">
-                    <div class="instagram-box">
-                        <a href="./productsPage.html">
-                            <button class="">Shop Now</button>
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-2 instagram-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/IMG_7369.JPG" alt="">
-                    <div class="instagram-box">
-                        <a href="./productsPage.html">
-                            <button class="">Shop Now</button>
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-2 instagram-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/IMG_6285.JPG" alt="">
-                    <div class="instagram-box">
-                        <a href="./productsPage.html">
-                            <button class="">Shop Now</button>
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-2 instagram-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/IMG_4190.png" alt="">
-                    <div class="instagram-box">
-                        <a href="./productsPage.html">
-                            <button class="">Shop Now</button>
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-2 instagram-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/12__1_.jpg" alt="">
-                    <div class="instagram-box">
-                        <a href="./productsPage.html">
-                            <button class="">Shop Now</button>
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-                <div class="col-xl-2 instagram-wrap">
-                    <img src="https://mcdn.nhanh.vn/store3/105877/bn/imagerepost__15_.jpg" alt="">
-                    <div class="instagram-box">
-                        <a href="./productsPage.html">
-                            <button class="">Shop Now</button>
-                        </a>
-                        <div class="box-overlay"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
     <div class="footer">
         <div class="container-fluid footer-container">
             <div class="row">
@@ -808,26 +678,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-    <script
-    type="text/javascript"
-    src="https://code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-    type="text/javascript"
-    src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script src="./js/slick.js"></script>
-    <script src="./index.js"></script>
 </body>
-
+<script src="./index.js"></script>
 </html>
